@@ -21,6 +21,9 @@ public class Player {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
 
     public void takeCard(Card card) {
         hand.add(card);

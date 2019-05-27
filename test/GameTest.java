@@ -43,9 +43,15 @@ public class GameTest {
         c2 = new Card(Suit.DIAMONDS,Rank.FOUR);
         c3 = new Card(Suit.HEARTS,Rank.FIVE);
         c4 = new Card(Suit.HEARTS,Rank.SEVEN);
+        p1.takeCard(c1);
+        p1.takeCard(c1);
+        p1.takeCard(c4);
+        p2.takeCard(c3);
+        p2.takeCard(c1);
+        p2.takeCard(c2);
     }
 
-    @BeforeClass
+    /*@BeforeClass
     public static void darcartas(){
         p1.takeCard(c1);
         p1.takeCard(c1);
@@ -53,6 +59,32 @@ public class GameTest {
         p2.takeCard(c3);
         p2.takeCard(c1);
         p2.takeCard(c2);
+    }*/
+
+    /*@Test
+    public void testhandvalue(){
+        int handvalue = p1.getHandValue();
+        assertEquals(11,handvalue);
+
+    }*/
+
+    @Test
+    public void testplayername(){
+        String name = p1.getName();
+        assertEquals("p1",name);
+
+    }
+
+    @Test
+    public void testhandsize(){
+        int handsize = p1.countHand();
+        assertEquals(3, handsize);
+    }
+
+    @Test
+    public void testcardvalue(){
+        int cardvalue = p1.getCardValue();
+        assertEquals(2,cardvalue);
     }
 
     @Test
@@ -67,12 +99,18 @@ public class GameTest {
         assertEquals(p2,ganhador);
     }
 
-    @Test //test for p1 win
+    /*@Test //test for p1 win
     public void testjogar2(){
         Player ganhador = game.jogar(p1, p2);
         assertEquals(p1,ganhador);
-    }
+    }*/
 
+    @Test
+    public void testhandvalue(){
+        int handvalue = p1.getHandValue();
+        assertEquals(11,handvalue);
+
+    }
 
 
 }
