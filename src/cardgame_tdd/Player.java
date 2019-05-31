@@ -41,9 +41,11 @@ public class Player {
         }
         return cardValues;
     }
+
     public int getCardValue(){        
         return (hand.get(0).getValue());
     }
+
     public void removeCard(){
         hand.remove(0);
     }

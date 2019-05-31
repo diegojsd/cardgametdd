@@ -21,6 +21,9 @@ public class Game {
         this.dealer = new Dealer();
     }
 
+    public Dealer getDealer() {
+        return dealer;
+    }
 
     public void addPlayer(Player player) {
         players.add(player);

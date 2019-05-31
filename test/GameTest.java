@@ -31,6 +31,7 @@ public class GameTest {
     static Card c2;
     static Card c3;
     static Card c4;
+    static Dealer d1;
 
     @BeforeClass
     public static void iniciajogo(){
@@ -49,6 +50,10 @@ public class GameTest {
         p2.takeCard(c3);
         p2.takeCard(c1);
         p2.takeCard(c2);
+        game.dealGame();
+        d1 = game.getDealer();
+        d1.countUnshuffledCards();
+        d1.countCards();
     }
 
     /*@BeforeClass
@@ -75,17 +80,12 @@ public class GameTest {
 
     }
 
-    @Test
-    public void testhandsize(){
-        int handsize = p1.countHand();
-        assertEquals(3, handsize);
-    }
 
-    @Test
+    /*@Test
     public void testcardvalue(){
         int cardvalue = p1.getCardValue();
         assertEquals(2,cardvalue);
-    }
+    }*/
 
     @Test
     public void testcountplayer(){
@@ -99,17 +99,28 @@ public class GameTest {
         assertEquals(p2,ganhador);
     }
 
-    /*@Test //test for p1 win
+    @Test //test for p1 win
     public void testjogar2(){
         Player ganhador = game.jogar(p1, p2);
         assertEquals(p1,ganhador);
-    }*/
+    }
+
 
     @Test
-    public void testhandvalue(){
-        int handvalue = p1.getHandValue();
-        assertEquals(11,handvalue);
+    public void testCheckWinner(){
+        String winner = game.checkWinner();
+        assertEquals("Someone wins",winner);
+    }
 
+    @Test
+    public void testGetSuit(){
+        Suit nipe = c3.getSuit();
+        assertEquals(Suit.HEARTS,nipe);
+    }
+    @Test
+    public void testGetRank(){
+        Rank number = c3.getRank();
+        assertEquals(Rank.FIVE,number);
     }
 
 

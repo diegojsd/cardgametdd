@@ -22,7 +22,7 @@ public class Card {
         return this.suit;
     }
 
-    public Rank getType() {
+    public Rank getRank() {
         return value;
     }
 

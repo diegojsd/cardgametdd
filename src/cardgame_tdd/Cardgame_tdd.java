@@ -7,7 +7,7 @@ package cardgame_tdd;
 
 /**
  *
- * @author Aluno
+ * @author Diego Duarte e Lorenna Nascimento
  */
 public class Cardgame_tdd {
 
@@ -15,7 +15,7 @@ public class Cardgame_tdd {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
     }
     
 }
