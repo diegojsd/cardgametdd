@@ -39,7 +39,7 @@ public class Deck {
         shuffledCards.clear();
         for (int i = cards.size(); i > 0; i--){
             double randomNumber = Math.random();
-            randomNumber= randomNumber * i;
+            randomNumber = randomNumber * i;
             int randomIndex = (int) randomNumber;
             Card randomCard = cards.remove(randomIndex);
             shuffledCards.add(randomCard);

@@ -52,8 +52,6 @@ public class GameTest {
         p2.takeCard(c2);
         game.dealGame();
         d1 = game.getDealer();
-        d1.countUnshuffledCards();
-        d1.countCards();
     }
 
     /*@BeforeClass
@@ -80,7 +78,6 @@ public class GameTest {
 
     }
 
-
     /*@Test
     public void testcardvalue(){
         int cardvalue = p1.getCardValue();
@@ -105,7 +102,6 @@ public class GameTest {
         assertEquals(p1,ganhador);
     }
 
-
     @Test
     public void testCheckWinner(){
         String winner = game.checkWinner();
@@ -117,11 +113,24 @@ public class GameTest {
         Suit nipe = c3.getSuit();
         assertEquals(Suit.HEARTS,nipe);
     }
+
     @Test
     public void testGetRank(){
         Rank number = c3.getRank();
         assertEquals(Rank.FIVE,number);
     }
 
+    @Test
+    public void testUnshuffled(){
+        int unshuffled = d1.countUnshuffledCards();
+        assertEquals(52,unshuffled);
 
+    }
+
+    @Test
+    public void testCountCard(){
+        int count = d1.countCards();
+        assertEquals(50,count);
+
+    }
 }
